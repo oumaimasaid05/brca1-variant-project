@@ -12,4 +12,4 @@ dropped["pos"] = dropped["Location"].str.split(":").str[1].str.split("-").str[0]
 
 print("Dropped variants:", len(dropped))
 print(dropped["pos"].describe())
-print(dropped["SYMBOL"].value_counts().head(8))
+print(dropped["SYMBOL"].value_counts(dropna=False).head(8))

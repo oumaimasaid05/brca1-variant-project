@@ -72,7 +72,7 @@ cod = cod.dropna(subset=["aa_pos"])
 
 L = 1863  # BRCA1 protein length (UniProt P38398)
 domains = [("RING", 24, 65, "#8ecae6"),
-           ("BRCT 1", 1646, 1736, "#ffb703"),
+           ("BRCT 1", 1642, 1736, "#ffb703"),
            ("BRCT 2", 1756, 1855, "#fb8500")]  # verify boundaries in UniProt P38398
 
 fig, ax = plt.subplots(figsize=(14, 5))
@@ -84,7 +84,7 @@ for g, sub_g in cod.groupby("cv_group"):
     ax.vlines(sub_g.aa_pos, 0, 1, color=cv_colors[g], alpha=0.6, linewidth=1)
     ax.scatter(sub_g.aa_pos, [1] * len(sub_g), color=cv_colors[g], s=40,
                label=f"{g} (n={len(sub_g)})", zorder=3)
-ax.set_xlim(0, L); ax.set_ylim(-0.8, 1.3)
+ax.set_xlim(-25, L + 25); ax.set_ylim(-0.8, 1.75); ax.grid(False)
 ax.set_yticks([]); ax.set_xlabel("Amino acid position (BRCA1, NP_009225.1)")
 ax.set_title("Coding variants along the BRCA1 protein")
 ax.legend(loc="upper center", ncol=3, fontsize=10, frameon=False)
