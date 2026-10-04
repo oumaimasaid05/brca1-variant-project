@@ -1,0 +1,6 @@
+group,Canonical splice site,Frameshift,In-frame indel,Intronic,Missense,Nonsense,"Other (UTR, non-coding, etc.)",Synonymous
+1000 Genomes (observed),2,0,0,1694,98,1,259,47
+ClinVar Benign / Likely benign,9,1,1,2840,490,2,287,102
+ClinVar Conflicting,21,4,0,199,2665,3,29,3
+ClinVar Pathogenic / Likely pathogenic,337,2578,0,71,233,853,43,1
+ClinVar VUS,67,23,3,330,1936,10,120,2
